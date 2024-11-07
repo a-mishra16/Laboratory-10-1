@@ -7,5 +7,32 @@
 
 #include <iostream> 
 #include <iomanip>
+#include <string>
 
 using namespace std;
+
+int countLetters(string str);
+
+int main()
+{
+	string quote;
+
+	getline(cin, quote);
+
+	cout << countLetters(quote);
+
+
+}
+
+int countLetters(string str)
+{
+	int count = 0;
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] > 65 && str[i] < 123)
+		{
+			count++;
+		}
+	}
+	return count;
+}
